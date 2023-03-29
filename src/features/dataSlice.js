@@ -29,4 +29,16 @@ export const dataSlice = createSlice({
 
 export const { setData, incrementId, decrementId, inputId, reset } = dataSlice.actions
 
+export const fetchData = () => {
+    const dataThunk = async (dispatch, getState) => {
+        let state = getState
+        console.log(state)
+        const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${state.data.objectId}`)
+        const resData = await response.json()
+        console.log(resData)
+        dispatch(setData(resData))
+    }
+    return dataThunk
+}
+
 export default dataSlice.reducer
