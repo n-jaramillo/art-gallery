@@ -39,6 +39,10 @@
   }
 }
 
+.buttonBar {
+  margin-top: 20px;
+}
+
 button,
 input {
   border: 1px solid lightgray;
