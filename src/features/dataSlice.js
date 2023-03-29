@@ -1,28 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    objectId,
-    apiData
+    objectId: 12720,
+    apiData: {}
 }
 
 export const dataSlice = createSlice({
-    name: '',
+    name: 'data',
     initialState,
     reducers: {
-        setData: () => {
-
+        setData: (state, action) => {
+            return { ...state, apiData: action.payload }
         },
-        incrementId: () => {
-
+        incrementId: (state) => {
+            return { ...state, objectId: state.objectId + 1 }
         },
-        decrementId: () => {
-
+        decrementId: (state) => {
+            return { ...state, objectId: state.objectId - 1 }
         },
-        inputId: () => {
-
+        inputId: (state, action) => {
+            return { ...state, objectId: action.payload }
         },
         reset: () => {
-
+            return initialState
         }
     }
 })
