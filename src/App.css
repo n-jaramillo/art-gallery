@@ -33,7 +33,56 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  border: none;
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+.gallery {
+  background-color: #e9e9ed;
+  width: 90%;
+  margin: 30px auto;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gallery h1 {
+  padding: 20px 50px 0;
+  font-variant: small-caps;
+  font-size: 20px;
+}
+
+.gallery p {
+  font-variant: small-caps;
+  padding: 20px 0px 30px;
+}
+
+.gallery img {
+  max-height: 70vh;
+  max-width: 90%;
+}
+
+.noImg {
+  height: 200px;
+  width: 300px;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noImg p {
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
 }
