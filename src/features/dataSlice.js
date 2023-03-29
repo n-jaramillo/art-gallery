@@ -31,7 +31,7 @@ export const { setData, incrementId, decrementId, inputId, reset } = dataSlice.a
 
 export const fetchData = () => {
     const dataThunk = async (dispatch, getState) => {
-        let state = getState
+        let state = getState()
         console.log(state)
         const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${state.data.objectId}`)
         const resData = await response.json()
