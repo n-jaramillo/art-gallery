@@ -1,10 +1,12 @@
 function Gallery(props) {
-    let primaryImg = (
-        <img src={props.objectImg} alt={props.title} />
+    let galleryObject = props.data.apiData
+
+    let galleryImg = (
+        <img src={galleryObject.primaryImage} alt={galleryObject.title} />
     )
 
-    if (props.objectImg === "") {
-        primaryImg = (
+    if (galleryObject.primaryImage === "") {
+        galleryImg = (
             <div className="noImg">
                 <p>No Image Available</p>
             </div>
@@ -13,9 +15,9 @@ function Gallery(props) {
 
     return (
         <div className="gallery">
-            <h1>{props.title}</h1>
-            {primaryImg}
-            <p>{props.artist}</p>
+            <h1>{galleryObject.title}</h1>
+            {galleryImg}
+            <p>{galleryObject.artistDisplayName}</p>
         </div>
     )
 }
